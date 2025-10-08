@@ -16,5 +16,17 @@ namespace TaskGX
         {
             InitializeComponent();
         }
+
+     
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void botaoEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
