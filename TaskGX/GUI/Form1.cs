@@ -26,7 +26,9 @@ namespace TaskGX
 
         private void botaoEntrar_Click(object sender, EventArgs e)
         {
-
+            var FormTarefas = new GUI.FormTarefas();
+            FormTarefas.Show();
+            this.Hide();
         }
     }
 }

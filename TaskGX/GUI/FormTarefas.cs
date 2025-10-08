@@ -16,5 +16,25 @@ namespace TaskGX.GUI
         {
             InitializeComponent();
         }
+
+        private void BotaoEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotaoExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotaoSair_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotaoAdicionar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
