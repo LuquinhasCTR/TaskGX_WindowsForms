@@ -39,7 +39,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelInserir = new System.Windows.Forms.Panel();
             this.TituloTarefa = new System.Windows.Forms.TextBox();
@@ -64,7 +64,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(784, 70);
-            this.lblTitulo.TabIndex = 3;
+            this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "📝 Minhas Tarefas";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -79,7 +79,7 @@
             this.panelInserir.Name = "panelInserir";
             this.panelInserir.Padding = new System.Windows.Forms.Padding(20);
             this.panelInserir.Size = new System.Drawing.Size(784, 120);
-            this.panelInserir.TabIndex = 2;
+            this.panelInserir.TabIndex = 1;
             // 
             // TituloTarefa
             // 
@@ -102,7 +102,7 @@
             this.DescricaoTarefa.Multiline = true;
             this.DescricaoTarefa.Name = "DescricaoTarefa";
             this.DescricaoTarefa.Size = new System.Drawing.Size(740, 50);
-            this.DescricaoTarefa.TabIndex = 1;
+            this.DescricaoTarefa.TabIndex = 2;
             // 
             // BotaoAdicionar
             // 
@@ -115,7 +115,7 @@
             this.BotaoAdicionar.Location = new System.Drawing.Point(727, 15);
             this.BotaoAdicionar.Name = "BotaoAdicionar";
             this.BotaoAdicionar.Size = new System.Drawing.Size(34, 34);
-            this.BotaoAdicionar.TabIndex = 2;
+            this.BotaoAdicionar.TabIndex = 1;
             this.BotaoAdicionar.Text = "+";
             this.BotaoAdicionar.UseVisualStyleBackColor = false;
             this.BotaoAdicionar.Click += new System.EventHandler(this.BotaoAdicionar_Click);
@@ -129,21 +129,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GridViewTarefa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridViewTarefa.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(115)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridViewTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(115)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridViewTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.GridViewTarefa.EnableHeadersVisualStyles = false;
             this.GridViewTarefa.Location = new System.Drawing.Point(20, 200);
             this.GridViewTarefa.Name = "GridViewTarefa";
             this.GridViewTarefa.ReadOnly = true;
             this.GridViewTarefa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridViewTarefa.Size = new System.Drawing.Size(740, 280);
-            this.GridViewTarefa.TabIndex = 1;
+            this.GridViewTarefa.TabIndex = 2;
             // 
             // groupBoxAcoes
             // 
@@ -156,7 +156,7 @@
             this.groupBoxAcoes.Location = new System.Drawing.Point(20, 490);
             this.groupBoxAcoes.Name = "groupBoxAcoes";
             this.groupBoxAcoes.Size = new System.Drawing.Size(740, 80);
-            this.groupBoxAcoes.TabIndex = 0;
+            this.groupBoxAcoes.TabIndex = 3;
             this.groupBoxAcoes.TabStop = false;
             this.groupBoxAcoes.Text = "Ações";
             // 
