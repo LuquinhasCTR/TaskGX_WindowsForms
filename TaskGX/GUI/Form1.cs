@@ -32,6 +32,16 @@ namespace TaskGX
             var FormTarefas = new GUI.FormTarefas();
             FormTarefas.Show();
             this.Hide();
+        private void BotaoVerSenha_Click(object sender, EventArgs e)
+        {
+            if (textSenha.PasswordChar != '*')
+            {
+                this.textSenha.PasswordChar = '*';
+            }
+            else
+            {
+                this.textSenha.PasswordChar = '\0';
+            }
         }
     }
 }
