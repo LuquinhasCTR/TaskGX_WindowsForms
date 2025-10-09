@@ -30,6 +30,7 @@ namespace TaskGX.GUI
         private void BotaoSair_Click(object sender, EventArgs e)
         {
 
+            Environment.Exit(0);
         }
 
         private void BotaoAdicionar_Click(object sender, EventArgs e)
