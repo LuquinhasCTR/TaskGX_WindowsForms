@@ -50,6 +50,7 @@
             this.BotaoEditar = new System.Windows.Forms.Button();
             this.BotaoExcluir = new System.Windows.Forms.Button();
             this.BotaoSair = new System.Windows.Forms.Button();
+            this.dateData = new System.Windows.Forms.DateTimePicker();
             this.panelInserir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewTarefa)).BeginInit();
             this.groupBoxAcoes.SuspendLayout();
@@ -71,6 +72,7 @@
             // panelInserir
             // 
             this.panelInserir.BackColor = System.Drawing.Color.DarkGray;
+            this.panelInserir.Controls.Add(this.dateData);
             this.panelInserir.Controls.Add(this.TituloTarefa);
             this.panelInserir.Controls.Add(this.DescricaoTarefa);
             this.panelInserir.Controls.Add(this.BotaoAdicionar);
@@ -87,10 +89,11 @@
             this.TituloTarefa.BackColor = System.Drawing.Color.Gainsboro;
             this.TituloTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TituloTarefa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TituloTarefa.Location = new System.Drawing.Point(23, 23);
+            this.TituloTarefa.Location = new System.Drawing.Point(21, 6);
             this.TituloTarefa.Name = "TituloTarefa";
             this.TituloTarefa.Size = new System.Drawing.Size(697, 25);
             this.TituloTarefa.TabIndex = 0;
+            this.TituloTarefa.TextChanged += new System.EventHandler(this.TituloTarefa_TextChanged);
             // 
             // DescricaoTarefa
             // 
@@ -98,7 +101,7 @@
             this.DescricaoTarefa.BackColor = System.Drawing.Color.Gainsboro;
             this.DescricaoTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DescricaoTarefa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.DescricaoTarefa.Location = new System.Drawing.Point(20, 61);
+            this.DescricaoTarefa.Location = new System.Drawing.Point(21, 37);
             this.DescricaoTarefa.Multiline = true;
             this.DescricaoTarefa.Name = "DescricaoTarefa";
             this.DescricaoTarefa.Size = new System.Drawing.Size(740, 50);
@@ -112,9 +115,9 @@
             this.BotaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotaoAdicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.BotaoAdicionar.ForeColor = System.Drawing.Color.White;
-            this.BotaoAdicionar.Location = new System.Drawing.Point(727, 15);
+            this.BotaoAdicionar.Location = new System.Drawing.Point(724, 6);
             this.BotaoAdicionar.Name = "BotaoAdicionar";
-            this.BotaoAdicionar.Size = new System.Drawing.Size(34, 34);
+            this.BotaoAdicionar.Size = new System.Drawing.Size(36, 25);
             this.BotaoAdicionar.TabIndex = 1;
             this.BotaoAdicionar.Text = "+";
             this.BotaoAdicionar.UseVisualStyleBackColor = false;
@@ -205,6 +208,14 @@
             this.BotaoSair.UseVisualStyleBackColor = false;
             this.BotaoSair.Click += new System.EventHandler(this.BotaoSair_Click);
             // 
+            // dateData
+            // 
+            this.dateData.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
+            this.dateData.Location = new System.Drawing.Point(20, 93);
+            this.dateData.Name = "dateData";
+            this.dateData.Size = new System.Drawing.Size(740, 20);
+            this.dateData.TabIndex = 4;
+            // 
             // FormTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +230,7 @@
             this.Name = "FormTarefas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minhas Tarefas";
+            this.Load += new System.EventHandler(this.FormTarefas_Load);
             this.panelInserir.ResumeLayout(false);
             this.panelInserir.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewTarefa)).EndInit();
@@ -228,5 +240,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.DateTimePicker dateData;
     }
 }
