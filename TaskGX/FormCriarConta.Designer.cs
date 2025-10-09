@@ -32,11 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textUsuario = new System.Windows.Forms.TextBox();
-            this.textSenha = new System.Windows.Forms.TextBox();
-            this.textConfirmarSenha = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.Usuario = new System.Windows.Forms.TextBox();
+            this.Senha = new System.Windows.Forms.TextBox();
+            this.ConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.BotaoRegistrar = new System.Windows.Forms.Button();
+            this.BotaoCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -66,57 +66,57 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Confirmar Senha";
             // 
-            // textUsuario
+            // Usuario
             // 
-            this.textUsuario.BackColor = System.Drawing.Color.LightGray;
-            this.textUsuario.Location = new System.Drawing.Point(150, 27);
-            this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(200, 20);
-            this.textUsuario.TabIndex = 3;
+            this.Usuario.BackColor = System.Drawing.Color.LightGray;
+            this.Usuario.Location = new System.Drawing.Point(150, 27);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(200, 20);
+            this.Usuario.TabIndex = 3;
             // 
-            // textSenha
+            // Senha
             // 
-            this.textSenha.BackColor = System.Drawing.Color.LightGray;
-            this.textSenha.Location = new System.Drawing.Point(150, 77);
-            this.textSenha.Name = "textSenha";
-            this.textSenha.PasswordChar = '*';
-            this.textSenha.Size = new System.Drawing.Size(200, 20);
-            this.textSenha.TabIndex = 4;
+            this.Senha.BackColor = System.Drawing.Color.LightGray;
+            this.Senha.Location = new System.Drawing.Point(150, 77);
+            this.Senha.Name = "Senha";
+            this.Senha.PasswordChar = '*';
+            this.Senha.Size = new System.Drawing.Size(200, 20);
+            this.Senha.TabIndex = 4;
             // 
-            // textConfirmarSenha
+            // ConfirmarSenha
             // 
-            this.textConfirmarSenha.BackColor = System.Drawing.Color.LightGray;
-            this.textConfirmarSenha.Location = new System.Drawing.Point(150, 127);
-            this.textConfirmarSenha.Name = "textConfirmarSenha";
-            this.textConfirmarSenha.PasswordChar = '*';
-            this.textConfirmarSenha.Size = new System.Drawing.Size(200, 20);
-            this.textConfirmarSenha.TabIndex = 5;
+            this.ConfirmarSenha.BackColor = System.Drawing.Color.LightGray;
+            this.ConfirmarSenha.Location = new System.Drawing.Point(150, 127);
+            this.ConfirmarSenha.Name = "ConfirmarSenha";
+            this.ConfirmarSenha.PasswordChar = '*';
+            this.ConfirmarSenha.Size = new System.Drawing.Size(200, 20);
+            this.ConfirmarSenha.TabIndex = 5;
             // 
-            // btnRegistrar
+            // BotaoRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.DimGray;
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Location = new System.Drawing.Point(150, 180);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(95, 30);
-            this.btnRegistrar.TabIndex = 6;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.BotaoRegistrar.BackColor = System.Drawing.Color.DimGray;
+            this.BotaoRegistrar.FlatAppearance.BorderSize = 0;
+            this.BotaoRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoRegistrar.Location = new System.Drawing.Point(150, 180);
+            this.BotaoRegistrar.Name = "BotaoRegistrar";
+            this.BotaoRegistrar.Size = new System.Drawing.Size(95, 30);
+            this.BotaoRegistrar.TabIndex = 6;
+            this.BotaoRegistrar.Text = "Registrar";
+            this.BotaoRegistrar.UseVisualStyleBackColor = false;
+            this.BotaoRegistrar.Click += new System.EventHandler(this.BotaoRegistrar_Click);
             // 
-            // btnCancelar
+            // BotaoCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(255, 180);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(95, 30);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.BotaoCancelar.BackColor = System.Drawing.Color.DimGray;
+            this.BotaoCancelar.FlatAppearance.BorderSize = 0;
+            this.BotaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoCancelar.Location = new System.Drawing.Point(255, 180);
+            this.BotaoCancelar.Name = "BotaoCancelar";
+            this.BotaoCancelar.Size = new System.Drawing.Size(95, 30);
+            this.BotaoCancelar.TabIndex = 7;
+            this.BotaoCancelar.Text = "Cancelar";
+            this.BotaoCancelar.UseVisualStyleBackColor = false;
+            this.BotaoCancelar.Click += new System.EventHandler(this.BotaoCancelar_Click);
             // 
             // FormCriarConta
             // 
@@ -125,16 +125,17 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textUsuario);
-            this.Controls.Add(this.textSenha);
-            this.Controls.Add(this.textConfirmarSenha);
-            this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.Usuario);
+            this.Controls.Add(this.Senha);
+            this.Controls.Add(this.ConfirmarSenha);
+            this.Controls.Add(this.BotaoRegistrar);
+            this.Controls.Add(this.BotaoCancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCriarConta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Criar Conta";
+            this.Load += new System.EventHandler(this.FormCriarConta_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,10 +145,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textUsuario;
-        private System.Windows.Forms.TextBox textSenha;
-        private System.Windows.Forms.TextBox textConfirmarSenha;
-        private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox Usuario;
+        private System.Windows.Forms.TextBox Senha;
+        private System.Windows.Forms.TextBox ConfirmarSenha;
+        private System.Windows.Forms.Button BotaoRegistrar;
+        private System.Windows.Forms.Button BotaoCancelar;
     }
 }
