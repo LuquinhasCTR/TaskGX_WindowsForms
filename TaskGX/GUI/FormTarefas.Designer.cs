@@ -40,6 +40,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTarefas));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelInserir = new System.Windows.Forms.Panel();
             this.dateData = new System.Windows.Forms.DateTimePicker();
@@ -85,6 +86,7 @@
             // 
             // dateData
             // 
+            this.dateData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateData.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dateData.Location = new System.Drawing.Point(20, 93);
             this.dateData.Name = "dateData";
@@ -101,7 +103,6 @@
             this.TituloTarefa.Name = "TituloTarefa";
             this.TituloTarefa.Size = new System.Drawing.Size(697, 25);
             this.TituloTarefa.TabIndex = 0;
-            this.TituloTarefa.TextChanged += new System.EventHandler(this.TituloTarefa_TextChanged);
             // 
             // DescricaoTarefa
             // 
@@ -155,7 +156,6 @@
             this.GridViewTarefa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridViewTarefa.Size = new System.Drawing.Size(740, 280);
             this.GridViewTarefa.TabIndex = 2;
-            this.GridViewTarefa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewTarefa_CellContentClick);
             // 
             // groupBoxAcoes
             // 
@@ -227,6 +227,7 @@
             this.Controls.Add(this.GridViewTarefa);
             this.Controls.Add(this.panelInserir);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(470, 600);
             this.Name = "FormTarefas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

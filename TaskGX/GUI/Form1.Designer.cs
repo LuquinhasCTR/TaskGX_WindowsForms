@@ -16,12 +16,15 @@
         #region Código gerado pelo Windows Form Designer
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.LabelTitulo = new System.Windows.Forms.Label();
             this.LabelUsuario = new System.Windows.Forms.Label();
             this.textUsuario = new System.Windows.Forms.TextBox();
             this.LabelSenha = new System.Windows.Forms.Label();
             this.textSenha = new System.Windows.Forms.TextBox();
             this.botaoEntrar = new System.Windows.Forms.Button();
+            this.BotaoVerSenha = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LabelTitulo
@@ -92,10 +95,31 @@
             this.botaoEntrar.UseVisualStyleBackColor = false;
             this.botaoEntrar.Click += new System.EventHandler(this.botaoEntrar_Click);
             // 
+            // BotaoVerSenha
+            // 
+            this.BotaoVerSenha.BackColor = System.Drawing.Color.DimGray;
+            this.BotaoVerSenha.Location = new System.Drawing.Point(293, 139);
+            this.BotaoVerSenha.Name = "BotaoVerSenha";
+            this.BotaoVerSenha.Size = new System.Drawing.Size(18, 19);
+            this.BotaoVerSenha.TabIndex = 6;
+            this.BotaoVerSenha.UseVisualStyleBackColor = false;
+            this.BotaoVerSenha.Click += new System.EventHandler(this.BotaoVerSenha_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(310, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Ver senha";
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(368, 300);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BotaoVerSenha);
             this.Controls.Add(this.LabelTitulo);
             this.Controls.Add(this.LabelUsuario);
             this.Controls.Add(this.textUsuario);
@@ -103,6 +127,7 @@
             this.Controls.Add(this.textSenha);
             this.Controls.Add(this.botaoEntrar);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(384, 339);
             this.MinimumSize = new System.Drawing.Size(384, 339);
             this.Name = "Form1";
@@ -121,5 +146,8 @@
         private System.Windows.Forms.TextBox textSenha;
         private System.Windows.Forms.Button botaoEntrar;
         #endregion
+
+        private System.Windows.Forms.Button BotaoVerSenha;
+        private System.Windows.Forms.Label label1;
     }
 }
