@@ -1,27 +1,67 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dapper;
-using Microsoft.Win32;
 using MySql.Data.MySqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TaskGX.GUI
 {
     public partial class FormTarefas : Form
     {
-        public FormTarefas()
+        private int UtilizadorID;
+        private string NomeUtilizador;
+
+        public FormTarefas(int utilizadorID, string nomeUtilizador)
         {
             InitializeComponent();
+            UtilizadorID = utilizadorID;
+            NomeUtilizador = nomeUtilizador;
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void FormTarefas_Load(object sender, EventArgs e)
+        {
+            this.Text = $"Gestão de Tarefas - {NomeUtilizador}";
             CarregarDados();
+        }
+
+        private void BotaoAdicionar_Click(object sender, EventArgs e)
+        {
+            string nome = TituloTarefa.Text.Trim();
+            string descricao = DescricaoTarefa.Text.Trim();
+            DateTime data = dateData.Value.Date;
+
+            if (string.IsNullOrEmpty(nome))
+            {
+                MessageBox.Show("O nome da tarefa é obrigatório.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
+                {
+                    conexao.Open();
+
+                    string query = "INSERT INTO Tarefa (Nome, Descricao, `Data`, UtilizadorID) VALUES (@nome, @descricao, @data, @uid)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                    {
+                        cmd.Parameters.AddWithValue("@nome", nome);
+                        cmd.Parameters.AddWithValue("@descricao", descricao);
+                        cmd.Parameters.AddWithValue("@data", data);
+                        cmd.Parameters.AddWithValue("@uid", UtilizadorID);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Tarefa adicionada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TituloTarefa.Clear();
+                DescricaoTarefa.Clear();
+                CarregarDados();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar a tarefa: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotaoEditar_Click(object sender, EventArgs e)
@@ -48,25 +88,20 @@ namespace TaskGX.GUI
                 using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
                 {
                     conexao.Open();
-
-                    string query = "UPDATE Tarefa SET Nome=@nome, Descricao=@descricao, `Data`=@data WHERE ID=@id";
-
+                    string query = "UPDATE Tarefa SET Nome=@nome, Descricao=@descricao, `Data`=@data WHERE ID=@id AND UtilizadorID=@uid";
                     using (MySqlCommand cmd = new MySqlCommand(query, conexao))
                     {
                         cmd.Parameters.AddWithValue("@nome", nome);
                         cmd.Parameters.AddWithValue("@descricao", descricao);
                         cmd.Parameters.AddWithValue("@data", data);
                         cmd.Parameters.AddWithValue("@id", id);
-
+                        cmd.Parameters.AddWithValue("@uid", UtilizadorID);
                         cmd.ExecuteNonQuery();
                     }
                 }
 
                 MessageBox.Show("Tarefa atualizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Atualiza GridView
                 CarregarDados();
-                
             }
             catch (Exception ex)
             {
@@ -98,23 +133,19 @@ namespace TaskGX.GUI
                     using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
                     {
                         conexao.Open();
-
-                        string query = "DELETE FROM Tarefa WHERE ID=@id";
+                        string query = "DELETE FROM Tarefa WHERE ID=@id AND UtilizadorID=@uid";
                         using (MySqlCommand cmd = new MySqlCommand(query, conexao))
                         {
                             cmd.Parameters.AddWithValue("@id", id);
+                            cmd.Parameters.AddWithValue("@uid", UtilizadorID);
                             cmd.ExecuteNonQuery();
                         }
                     }
 
                     MessageBox.Show("Tarefa excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Limpar campos
                     TituloTarefa.Clear();
                     DescricaoTarefa.Clear();
                     dateData.Value = DateTime.Today;
-
-                    // Atualizar GridView
                     CarregarDados();
                 }
                 catch (Exception ex)
@@ -124,73 +155,21 @@ namespace TaskGX.GUI
             }
         }
 
-        private void BotaoSair_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void BotaoAdicionar_Click(object sender, EventArgs e)
-        {
-            string nome = TituloTarefa.Text.Trim();
-            string descricao = DescricaoTarefa.Text.Trim();
-            DateTime data = dateData.Value.Date;
-
-            if (string.IsNullOrEmpty(nome))
-            {
-                MessageBox.Show("O nome da tarefa é obrigatório.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
-                {
-                    conexao.Open();
-
-                    string query = "INSERT INTO Tarefa (Nome, Descricao, `Data`) VALUES (@nome, @descricao, @data)";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conexao))
-                    {
-                        cmd.Parameters.AddWithValue("@nome", nome);
-                        cmd.Parameters.AddWithValue("@descricao", descricao);
-                        cmd.Parameters.AddWithValue("@data", data);
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-    
-                MessageBox.Show("Tarefa adicionada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Limpar campos
-                TituloTarefa.Clear();
-                DescricaoTarefa.Clear();
-
-                CarregarDados();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao adicionar a tarefa: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        
         private void CarregarDados()
         {
             try
             {
-                // Usa a connection string da tua classe LigacaoDB
                 using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
                 {
                     conexao.Open();
+                    string query = "SELECT ID, Nome, Descricao, Data FROM Tarefa WHERE UtilizadorID = @uid";
 
-                    string query = "SELECT ID, nome AS Nome, descricao AS Descricao, data AS Data FROM tarefa";
                     using (MySqlDataAdapter adaptador = new MySqlDataAdapter(query, conexao))
                     {
+                        adaptador.SelectCommand.Parameters.AddWithValue("@uid", UtilizadorID);
                         DataTable tabela = new DataTable();
                         adaptador.Fill(tabela);
                         GridViewTarefa.DataSource = tabela;
-                        TituloTarefa.Text = "";
-                        DescricaoTarefa.Text = "";
                     }
                 }
             }
@@ -199,17 +178,10 @@ namespace TaskGX.GUI
                 MessageBox.Show("Erro ao carregar dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void BindAluno(int v) => throw new NotImplementedException();
 
-        private void FormTarefas_Load(object sender, EventArgs e)
+        private void GridViewTarefa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-        
-        private void TituloTarefa_TextChanged(object sender, EventArgs e)
-        {
-            // Serve pra garantir que os campos ficam preenchidos
-            if (GridViewTarefa.CurrentRow != null && !TituloTarefa.Focused)
+            if (GridViewTarefa.CurrentRow != null)
             {
                 TituloTarefa.Text = GridViewTarefa.CurrentRow.Cells["Nome"].Value.ToString();
                 DescricaoTarefa.Text = GridViewTarefa.CurrentRow.Cells["Descricao"].Value.ToString();
@@ -217,14 +189,14 @@ namespace TaskGX.GUI
             }
         }
 
-        private void GridViewTarefa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BotaoSair_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void FormTarefas_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+            Application.Exit();
         }
     }
 }
