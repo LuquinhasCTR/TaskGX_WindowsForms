@@ -39,7 +39,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTarefas));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelInserir = new System.Windows.Forms.Panel();
@@ -69,6 +69,7 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "📝 Minhas Tarefas";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            //this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // panelInserir
             // 
@@ -124,6 +125,7 @@
             this.BotaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotaoAdicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.BotaoAdicionar.ForeColor = System.Drawing.Color.White;
+            this.BotaoAdicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BotaoAdicionar.Location = new System.Drawing.Point(724, 6);
             this.BotaoAdicionar.Name = "BotaoAdicionar";
             this.BotaoAdicionar.Size = new System.Drawing.Size(36, 25);
@@ -141,14 +143,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GridViewTarefa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridViewTarefa.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(115)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridViewTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(115)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridViewTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.GridViewTarefa.EnableHeadersVisualStyles = false;
             this.GridViewTarefa.Location = new System.Drawing.Point(20, 200);
             this.GridViewTarefa.Name = "GridViewTarefa";

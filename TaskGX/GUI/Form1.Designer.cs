@@ -25,6 +25,7 @@
             this.botaoEntrar = new System.Windows.Forms.Button();
             this.BotaoVerSenha = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.BotaoCriar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelTitulo
@@ -114,10 +115,27 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Ver senha";
             // 
+            // BotaoCriar
+            // 
+            this.BotaoCriar.BackColor = System.Drawing.Color.DimGray;
+            this.BotaoCriar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotaoCriar.FlatAppearance.BorderSize = 0;
+            this.BotaoCriar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoCriar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotaoCriar.ForeColor = System.Drawing.Color.Black;
+            this.BotaoCriar.Location = new System.Drawing.Point(110, 231);
+            this.BotaoCriar.Name = "BotaoCriar";
+            this.BotaoCriar.Size = new System.Drawing.Size(180, 35);
+            this.BotaoCriar.TabIndex = 8;
+            this.BotaoCriar.Text = "Criar conta";
+            this.BotaoCriar.UseVisualStyleBackColor = false;
+            this.BotaoCriar.Click += new System.EventHandler(this.BotaoCriar_Click);
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(368, 300);
+            this.Controls.Add(this.BotaoCriar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BotaoVerSenha);
             this.Controls.Add(this.LabelTitulo);
@@ -149,5 +167,6 @@
 
         private System.Windows.Forms.Button BotaoVerSenha;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BotaoCriar;
     }
 }
