@@ -79,5 +79,11 @@ namespace TaskGX
                 this.textSenha.PasswordChar = '\0';
             }
         }
+
+        private void BotaoCriar_Click(object sender, EventArgs e)
+        {
+            FormCriarConta formCriarConta = new FormCriarConta();
+            formCriarConta.Show();
+        }
     }
 }
