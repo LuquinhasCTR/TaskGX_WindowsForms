@@ -76,7 +76,52 @@ namespace TaskGX.GUI
 
         private void BotaoExcluir_Click(object sender, EventArgs e)
         {
+            if (GridViewTarefa.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione uma tarefa para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            int id = Convert.ToInt32(GridViewTarefa.CurrentRow.Cells["ID"].Value);
+
+            DialogResult resultado = MessageBox.Show(
+                "Deseja realmente excluir esta tarefa?",
+                "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                try
+                {
+                    using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
+                    {
+                        conexao.Open();
+
+                        string query = "DELETE FROM Tarefa WHERE ID=@id";
+                        using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                        {
+                            cmd.Parameters.AddWithValue("@id", id);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Tarefa excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Limpar campos
+                    TituloTarefa.Clear();
+                    DescricaoTarefa.Clear();
+                    dateData.Value = DateTime.Today;
+
+                    // Atualizar GridView
+                    CarregarDados();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao excluir a tarefa: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void BotaoSair_Click(object sender, EventArgs e)

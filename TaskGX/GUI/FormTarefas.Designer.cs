@@ -39,9 +39,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelInserir = new System.Windows.Forms.Panel();
+            this.dateData = new System.Windows.Forms.DateTimePicker();
             this.TituloTarefa = new System.Windows.Forms.TextBox();
             this.DescricaoTarefa = new System.Windows.Forms.TextBox();
             this.BotaoAdicionar = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.BotaoEditar = new System.Windows.Forms.Button();
             this.BotaoExcluir = new System.Windows.Forms.Button();
             this.BotaoSair = new System.Windows.Forms.Button();
-            this.dateData = new System.Windows.Forms.DateTimePicker();
             this.panelInserir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewTarefa)).BeginInit();
             this.groupBoxAcoes.SuspendLayout();
@@ -82,6 +82,14 @@
             this.panelInserir.Padding = new System.Windows.Forms.Padding(20);
             this.panelInserir.Size = new System.Drawing.Size(784, 120);
             this.panelInserir.TabIndex = 1;
+            // 
+            // dateData
+            // 
+            this.dateData.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
+            this.dateData.Location = new System.Drawing.Point(20, 93);
+            this.dateData.Name = "dateData";
+            this.dateData.Size = new System.Drawing.Size(740, 20);
+            this.dateData.TabIndex = 4;
             // 
             // TituloTarefa
             // 
@@ -132,14 +140,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GridViewTarefa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridViewTarefa.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(115)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridViewTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(115)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridViewTarefa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.GridViewTarefa.EnableHeadersVisualStyles = false;
             this.GridViewTarefa.Location = new System.Drawing.Point(20, 200);
             this.GridViewTarefa.Name = "GridViewTarefa";
@@ -147,6 +155,7 @@
             this.GridViewTarefa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridViewTarefa.Size = new System.Drawing.Size(740, 280);
             this.GridViewTarefa.TabIndex = 2;
+            this.GridViewTarefa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewTarefa_CellContentClick);
             // 
             // groupBoxAcoes
             // 
@@ -208,14 +217,6 @@
             this.BotaoSair.UseVisualStyleBackColor = false;
             this.BotaoSair.Click += new System.EventHandler(this.BotaoSair_Click);
             // 
-            // dateData
-            // 
-            this.dateData.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
-            this.dateData.Location = new System.Drawing.Point(20, 93);
-            this.dateData.Name = "dateData";
-            this.dateData.Size = new System.Drawing.Size(740, 20);
-            this.dateData.TabIndex = 4;
-            // 
             // FormTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +231,7 @@
             this.Name = "FormTarefas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minhas Tarefas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTarefas_FormClosing);
             this.Load += new System.EventHandler(this.FormTarefas_Load);
             this.panelInserir.ResumeLayout(false);
             this.panelInserir.PerformLayout();
