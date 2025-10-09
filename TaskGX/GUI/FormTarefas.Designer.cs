@@ -52,9 +52,13 @@
             this.BotaoEditar = new System.Windows.Forms.Button();
             this.BotaoExcluir = new System.Windows.Forms.Button();
             this.BotaoSair = new System.Windows.Forms.Button();
+            this.Menu = new System.Windows.Forms.MenuStrip();
+            this.contaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelInserir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewTarefa)).BeginInit();
             this.groupBoxAcoes.SuspendLayout();
+            this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -65,11 +69,10 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.Black;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(784, 70);
+            this.lblTitulo.Size = new System.Drawing.Size(784, 73);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "📝 Minhas Tarefas";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // panelInserir
             // 
@@ -79,7 +82,7 @@
             this.panelInserir.Controls.Add(this.DescricaoTarefa);
             this.panelInserir.Controls.Add(this.BotaoAdicionar);
             this.panelInserir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInserir.Location = new System.Drawing.Point(0, 70);
+            this.panelInserir.Location = new System.Drawing.Point(0, 73);
             this.panelInserir.Name = "panelInserir";
             this.panelInserir.Padding = new System.Windows.Forms.Padding(20);
             this.panelInserir.Size = new System.Drawing.Size(784, 120);
@@ -219,17 +222,50 @@
             this.BotaoSair.UseVisualStyleBackColor = false;
             this.BotaoSair.Click += new System.EventHandler(this.BotaoSair_Click);
             // 
+            // Menu
+            // 
+            this.Menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Menu.Dock = System.Windows.Forms.DockStyle.None;
+            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contaToolStripMenuItem});
+            this.Menu.Location = new System.Drawing.Point(0, 0);
+            this.Menu.Name = "Menu";
+            this.Menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.Menu.Size = new System.Drawing.Size(179, 24);
+            this.Menu.TabIndex = 4;
+            this.Menu.Text = "menuStrip1";
+            this.Menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // contaToolStripMenuItem
+            // 
+            this.contaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gerirContaToolStripMenuItem});
+            this.contaToolStripMenuItem.Name = "contaToolStripMenuItem";
+            this.contaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.contaToolStripMenuItem.Text = "Conta";
+            this.contaToolStripMenuItem.Click += new System.EventHandler(this.contaToolStripMenuItem_Click);
+            // 
+            // gerirContaToolStripMenuItem
+            // 
+            this.gerirContaToolStripMenuItem.Name = "gerirContaToolStripMenuItem";
+            this.gerirContaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gerirContaToolStripMenuItem.Text = "Gerir Conta";
+            this.gerirContaToolStripMenuItem.Click += new System.EventHandler(this.gerirContaToolStripMenuItem_Click);
+            // 
             // FormTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 581);
+            this.Controls.Add(this.Menu);
             this.Controls.Add(this.groupBoxAcoes);
             this.Controls.Add(this.GridViewTarefa);
             this.Controls.Add(this.panelInserir);
             this.Controls.Add(this.lblTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.Menu;
             this.MinimumSize = new System.Drawing.Size(470, 600);
             this.Name = "FormTarefas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -240,12 +276,18 @@
             this.panelInserir.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewTarefa)).EndInit();
             this.groupBoxAcoes.ResumeLayout(false);
+            this.Menu.ResumeLayout(false);
+            this.Menu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateData;
+        private System.Windows.Forms.MenuStrip Menu;
+        private System.Windows.Forms.ToolStripMenuItem contaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gerirContaToolStripMenuItem;
     }
 }

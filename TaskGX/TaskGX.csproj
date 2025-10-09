@@ -107,6 +107,12 @@
     <Compile Include="FormCriarConta.Designer.cs">
       <DependentUpon>FormCriarConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormCentralConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCentralConta.Designer.cs">
+      <DependentUpon>FormCentralConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCentralConta.resx">
+      <DependentUpon>FormCentralConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormTarefas.resx">
       <DependentUpon>FormTarefas.cs</DependentUpon>

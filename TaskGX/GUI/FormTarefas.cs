@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TaskGX.GUI
 {
@@ -197,6 +198,36 @@ namespace TaskGX.GUI
         private void FormTarefas_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void escluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+        }
+
+        private void tarefasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void colarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gerirContaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCentralConta formCentralConta = new FormCentralConta();
+            formCentralConta.Show();
         }
     }
 }

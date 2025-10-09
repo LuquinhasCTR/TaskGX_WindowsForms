@@ -16,5 +16,30 @@ namespace TaskGX.GUI
         {
             InitializeComponent();
         }
+
+        private void btnAlterarSenha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTerminarSessao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Perfil_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

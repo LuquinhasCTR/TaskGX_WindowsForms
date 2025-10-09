@@ -40,12 +40,10 @@ namespace TaskGX
 
         private void BotaoRegistrar_Click(object sender, EventArgs e)
         {
-            // Pegando os valores dos TextBox (ajuste os nomes se forem diferentes)
             string usuario = Usuario.Text.Trim();
-            string senha = Senha.Text;               // não use Trim em senha
+            string senha = Senha.Text;               
             string confirma = ConfirmarSenha.Text;
 
-            // 1) Validações básicas
             if (string.IsNullOrWhiteSpace(usuario) ||
                 string.IsNullOrEmpty(senha) ||
                 string.IsNullOrEmpty(confirma))
@@ -55,7 +53,6 @@ namespace TaskGX
                 return;
             }
 
-            // Regras simples para nome de usuário (ajuste se quiser)
             if (!Regex.IsMatch(usuario, @"^[a-zA-Z0-9_]{3,32}$"))
             {
                 MessageBox.Show("Usuário inválido. Use 3–32 caracteres (letras, números e _).", "Aviso",
