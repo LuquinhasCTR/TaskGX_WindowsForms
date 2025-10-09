@@ -13,6 +13,7 @@ namespace TaskGX
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.AcceptButton = botaoEntrar;
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -84,6 +85,11 @@ namespace TaskGX
         {
             FormCriarConta formCriarConta = new FormCriarConta();
             formCriarConta.Show();
+        }
+
+        private void LabelTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,6 +17,7 @@ namespace TaskGX.GUI
             UtilizadorID = utilizadorID;
             NomeUtilizador = nomeUtilizador;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.CancelButton = BotaoSair;
         }
 
         private void FormTarefas_Load(object sender, EventArgs e)
@@ -226,7 +227,7 @@ namespace TaskGX.GUI
 
         private void gerirContaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCentralConta formCentralConta = new FormCentralConta();
+            FormCentralConta formCentralConta = new FormCentralConta(UtilizadorID,NomeUtilizador);
             formCentralConta.Show();
         }
     }
