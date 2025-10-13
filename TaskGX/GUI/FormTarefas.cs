@@ -30,9 +30,9 @@ namespace TaskGX.GUI
 
         private void BotaoAdicionar_Click(object sender, EventArgs e)
         {
-            string nome = TituloTarefa.Text.Trim();
-            string descricao = DescricaoTarefa.Text.Trim();
-            DateTime data = dateData.Value.Date;
+            string nome = TextTituloTarefa.Text.Trim();
+            string descricao = TextDescricaoTarefa.Text.Trim();
+            DateTime data = DateData.Value.Date;
 
             if (string.IsNullOrEmpty(nome))
             {
@@ -58,8 +58,8 @@ namespace TaskGX.GUI
                 }
 
                 MessageBox.Show("Tarefa adicionada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TituloTarefa.Clear();
-                DescricaoTarefa.Clear();
+                TextTituloTarefa.Clear();
+                TextDescricaoTarefa.Clear();
                 CarregarDados();
             }
             catch (Exception ex)
@@ -77,9 +77,9 @@ namespace TaskGX.GUI
             }
 
             int id = Convert.ToInt32(GridViewTarefa.CurrentRow.Cells["ID"].Value);
-            string nome = TituloTarefa.Text.Trim();
-            string descricao = DescricaoTarefa.Text.Trim();
-            DateTime data = dateData.Value.Date;
+            string nome = TextTituloTarefa.Text.Trim();
+            string descricao = TextDescricaoTarefa.Text.Trim();
+            DateTime data = DateData.Value.Date;
 
             if (string.IsNullOrEmpty(nome))
             {
@@ -147,9 +147,9 @@ namespace TaskGX.GUI
                     }
 
                     MessageBox.Show("Tarefa excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    TituloTarefa.Clear();
-                    DescricaoTarefa.Clear();
-                    dateData.Value = DateTime.Today;
+                    TextTituloTarefa.Clear();
+                    TextDescricaoTarefa.Clear();
+                    DateData.Value = DateTime.Today;
                     CarregarDados();
                 }
                 catch (Exception ex)
@@ -187,9 +187,9 @@ namespace TaskGX.GUI
         {
             if (GridViewTarefa.CurrentRow != null)
             {
-                TituloTarefa.Text = GridViewTarefa.CurrentRow.Cells["Nome"].Value.ToString();
-                DescricaoTarefa.Text = GridViewTarefa.CurrentRow.Cells["Descricao"].Value.ToString();
-                dateData.Value = Convert.ToDateTime(GridViewTarefa.CurrentRow.Cells["Data"].Value);
+                TextTituloTarefa.Text = GridViewTarefa.CurrentRow.Cells["Nome"].Value.ToString();
+                TextDescricaoTarefa.Text = GridViewTarefa.CurrentRow.Cells["Descricao"].Value.ToString();
+                DateData.Value = Convert.ToDateTime(GridViewTarefa.CurrentRow.Cells["Data"].Value);
             }
         }
 

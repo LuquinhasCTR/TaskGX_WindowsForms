@@ -7,13 +7,13 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label LabelTitulo;
         private System.Windows.Forms.Panel panelInserir;
-        private System.Windows.Forms.TextBox TituloTarefa;
-        private System.Windows.Forms.TextBox DescricaoTarefa;
+        private System.Windows.Forms.TextBox TextTituloTarefa;
+        private System.Windows.Forms.TextBox TextDescricaoTarefa;
         private System.Windows.Forms.Button BotaoAdicionar;
         private System.Windows.Forms.DataGridView GridViewTarefa;
-        private System.Windows.Forms.GroupBox groupBoxAcoes;
+        private System.Windows.Forms.GroupBox Acoes;
         private System.Windows.Forms.Button BotaoEditar;
         private System.Windows.Forms.Button BotaoExcluir;
         private System.Windows.Forms.Button BotaoSair;
@@ -41,14 +41,14 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTarefas));
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.LabelTitulo = new System.Windows.Forms.Label();
             this.panelInserir = new System.Windows.Forms.Panel();
-            this.dateData = new System.Windows.Forms.DateTimePicker();
-            this.TituloTarefa = new System.Windows.Forms.TextBox();
-            this.DescricaoTarefa = new System.Windows.Forms.TextBox();
+            this.DateData = new System.Windows.Forms.DateTimePicker();
+            this.TextTituloTarefa = new System.Windows.Forms.TextBox();
+            this.TextDescricaoTarefa = new System.Windows.Forms.TextBox();
             this.BotaoAdicionar = new System.Windows.Forms.Button();
             this.GridViewTarefa = new System.Windows.Forms.DataGridView();
-            this.groupBoxAcoes = new System.Windows.Forms.GroupBox();
+            this.Acoes = new System.Windows.Forms.GroupBox();
             this.BotaoEditar = new System.Windows.Forms.Button();
             this.BotaoExcluir = new System.Windows.Forms.Button();
             this.BotaoSair = new System.Windows.Forms.Button();
@@ -57,29 +57,29 @@
             this.gerirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelInserir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewTarefa)).BeginInit();
-            this.groupBoxAcoes.SuspendLayout();
+            this.Acoes.SuspendLayout();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTitulo
+            // LabelTitulo
             // 
-            this.lblTitulo.BackColor = System.Drawing.Color.DimGray;
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(784, 73);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "📝 Minhas Tarefas";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelTitulo.BackColor = System.Drawing.Color.DimGray;
+            this.LabelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LabelTitulo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.LabelTitulo.ForeColor = System.Drawing.Color.Black;
+            this.LabelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.LabelTitulo.Name = "LabelTitulo";
+            this.LabelTitulo.Size = new System.Drawing.Size(784, 73);
+            this.LabelTitulo.TabIndex = 0;
+            this.LabelTitulo.Text = "📝 Minhas Tarefas";
+            this.LabelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelInserir
             // 
             this.panelInserir.BackColor = System.Drawing.Color.DarkGray;
-            this.panelInserir.Controls.Add(this.dateData);
-            this.panelInserir.Controls.Add(this.TituloTarefa);
-            this.panelInserir.Controls.Add(this.DescricaoTarefa);
+            this.panelInserir.Controls.Add(this.DateData);
+            this.panelInserir.Controls.Add(this.TextTituloTarefa);
+            this.panelInserir.Controls.Add(this.TextDescricaoTarefa);
             this.panelInserir.Controls.Add(this.BotaoAdicionar);
             this.panelInserir.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInserir.Location = new System.Drawing.Point(0, 73);
@@ -88,37 +88,37 @@
             this.panelInserir.Size = new System.Drawing.Size(784, 120);
             this.panelInserir.TabIndex = 1;
             // 
-            // dateData
+            // DateData
             // 
-            this.dateData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateData.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
-            this.dateData.Location = new System.Drawing.Point(20, 93);
-            this.dateData.Name = "dateData";
-            this.dateData.Size = new System.Drawing.Size(740, 20);
-            this.dateData.TabIndex = 4;
+            this.DateData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DateData.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
+            this.DateData.Location = new System.Drawing.Point(20, 93);
+            this.DateData.Name = "DateData";
+            this.DateData.Size = new System.Drawing.Size(740, 20);
+            this.DateData.TabIndex = 4;
             // 
-            // TituloTarefa
+            // TextTituloTarefa
             // 
-            this.TituloTarefa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TituloTarefa.BackColor = System.Drawing.Color.Gainsboro;
-            this.TituloTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TituloTarefa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TituloTarefa.Location = new System.Drawing.Point(21, 6);
-            this.TituloTarefa.Name = "TituloTarefa";
-            this.TituloTarefa.Size = new System.Drawing.Size(697, 25);
-            this.TituloTarefa.TabIndex = 0;
+            this.TextTituloTarefa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextTituloTarefa.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextTituloTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextTituloTarefa.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TextTituloTarefa.Location = new System.Drawing.Point(21, 6);
+            this.TextTituloTarefa.Name = "TextTituloTarefa";
+            this.TextTituloTarefa.Size = new System.Drawing.Size(697, 25);
+            this.TextTituloTarefa.TabIndex = 0;
             // 
-            // DescricaoTarefa
+            // TextDescricaoTarefa
             // 
-            this.DescricaoTarefa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.DescricaoTarefa.BackColor = System.Drawing.Color.Gainsboro;
-            this.DescricaoTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DescricaoTarefa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.DescricaoTarefa.Location = new System.Drawing.Point(21, 37);
-            this.DescricaoTarefa.Multiline = true;
-            this.DescricaoTarefa.Name = "DescricaoTarefa";
-            this.DescricaoTarefa.Size = new System.Drawing.Size(740, 50);
-            this.DescricaoTarefa.TabIndex = 2;
+            this.TextDescricaoTarefa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextDescricaoTarefa.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextDescricaoTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextDescricaoTarefa.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TextDescricaoTarefa.Location = new System.Drawing.Point(21, 37);
+            this.TextDescricaoTarefa.Multiline = true;
+            this.TextDescricaoTarefa.Name = "TextDescricaoTarefa";
+            this.TextDescricaoTarefa.Size = new System.Drawing.Size(740, 50);
+            this.TextDescricaoTarefa.TabIndex = 2;
             // 
             // BotaoAdicionar
             // 
@@ -162,20 +162,20 @@
             this.GridViewTarefa.Size = new System.Drawing.Size(740, 280);
             this.GridViewTarefa.TabIndex = 2;
             // 
-            // groupBoxAcoes
+            // Acoes
             // 
-            this.groupBoxAcoes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.Acoes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxAcoes.Controls.Add(this.BotaoEditar);
-            this.groupBoxAcoes.Controls.Add(this.BotaoExcluir);
-            this.groupBoxAcoes.Controls.Add(this.BotaoSair);
-            this.groupBoxAcoes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBoxAcoes.Location = new System.Drawing.Point(20, 490);
-            this.groupBoxAcoes.Name = "groupBoxAcoes";
-            this.groupBoxAcoes.Size = new System.Drawing.Size(740, 80);
-            this.groupBoxAcoes.TabIndex = 3;
-            this.groupBoxAcoes.TabStop = false;
-            this.groupBoxAcoes.Text = "Ações";
+            this.Acoes.Controls.Add(this.BotaoEditar);
+            this.Acoes.Controls.Add(this.BotaoExcluir);
+            this.Acoes.Controls.Add(this.BotaoSair);
+            this.Acoes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Acoes.Location = new System.Drawing.Point(20, 490);
+            this.Acoes.Name = "Acoes";
+            this.Acoes.Size = new System.Drawing.Size(740, 80);
+            this.Acoes.TabIndex = 3;
+            this.Acoes.TabStop = false;
+            this.Acoes.Text = "Ações";
             // 
             // BotaoEditar
             // 
@@ -260,10 +260,10 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 581);
             this.Controls.Add(this.Menu);
-            this.Controls.Add(this.groupBoxAcoes);
+            this.Controls.Add(this.Acoes);
             this.Controls.Add(this.GridViewTarefa);
             this.Controls.Add(this.panelInserir);
-            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.LabelTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu;
             this.MinimumSize = new System.Drawing.Size(470, 600);
@@ -275,7 +275,7 @@
             this.panelInserir.ResumeLayout(false);
             this.panelInserir.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewTarefa)).EndInit();
-            this.groupBoxAcoes.ResumeLayout(false);
+            this.Acoes.ResumeLayout(false);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.ResumeLayout(false);
@@ -285,7 +285,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateData;
+        private System.Windows.Forms.DateTimePicker DateData;
         private System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem contaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerirContaToolStripMenuItem;
