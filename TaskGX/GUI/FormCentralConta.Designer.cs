@@ -101,7 +101,6 @@ namespace TaskGX.GUI
             this.Perfil.TabIndex = 2;
             this.Perfil.TabStop = false;
             this.Perfil.Text = "Perfil";
-            this.Perfil.Enter += new System.EventHandler(this.Perfil_Enter);
             // 
             // lblId
             // 
@@ -247,7 +246,7 @@ namespace TaskGX.GUI
             this.BotaoAlterarSenha.TabIndex = 7;
             this.BotaoAlterarSenha.Text = "Alterar senha";
             this.BotaoAlterarSenha.UseVisualStyleBackColor = false;
-            this.BotaoAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
+            this.BotaoAlterarSenha.Click += new System.EventHandler(this.BotaoAlterarSenha_Click);
             // 
             // Sessao
             // 
@@ -285,7 +284,7 @@ namespace TaskGX.GUI
             this.btnFechar.TabIndex = 5;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click_1);
             // 
             // lblStatus
             // 
