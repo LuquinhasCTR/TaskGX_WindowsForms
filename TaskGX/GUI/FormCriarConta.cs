@@ -30,7 +30,8 @@ namespace TaskGX
 
         private void FormCriarConta_Load_1(object sender, EventArgs e)
         {
-
+            this.AcceptButton = BotaoRegistrar;
+            this.CancelButton = BotaoCancelar;
         }
 
         private void BotaoCancelar_Click(object sender, EventArgs e)

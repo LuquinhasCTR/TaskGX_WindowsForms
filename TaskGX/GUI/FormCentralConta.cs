@@ -28,6 +28,7 @@ namespace TaskGX.GUI
         {
             this.Text = $"Gestão da Conta - {NomeUtilizador}";
             CarregarDadosUtilizador();
+            this.CancelButton = btnFechar;
         }
         private void CarregarDadosUtilizador()
         {

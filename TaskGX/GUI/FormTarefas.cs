@@ -24,6 +24,8 @@ namespace TaskGX.GUI
         {
             this.Text = $"Gestão de Tarefas - {NomeUtilizador}";
             CarregarDados();
+            this.AcceptButton = BotaoAdicionar;
+            this.CancelButton = BotaoSair;
         }
 
         private void BotaoAdicionar_Click(object sender, EventArgs e)
@@ -227,7 +229,7 @@ namespace TaskGX.GUI
         }
         private void FormTarefas_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void escluirToolStripMenuItem_Click(object sender, EventArgs e)
