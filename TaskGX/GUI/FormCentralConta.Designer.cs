@@ -85,7 +85,7 @@ namespace TaskGX.GUI
             this.LabelTitulo.Location = new System.Drawing.Point(16, 12);
             this.LabelTitulo.Name = "LabelTitulo";
             this.LabelTitulo.Size = new System.Drawing.Size(156, 25);
-            this.LabelTitulo.TabIndex = 0;
+            this.LabelTitulo.TabIndex = 1;
             this.LabelTitulo.Text = "Central da Conta";
             // 
             // Perfil
@@ -165,7 +165,7 @@ namespace TaskGX.GUI
             this.LabelVerSenha.Location = new System.Drawing.Point(200, 166);
             this.LabelVerSenha.Name = "LabelVerSenha";
             this.LabelVerSenha.Size = new System.Drawing.Size(62, 15);
-            this.LabelVerSenha.TabIndex = 9;
+            this.LabelVerSenha.TabIndex = 7;
             this.LabelVerSenha.Text = "Ver senhas";
             // 
             // BotaoVerSenha
@@ -173,7 +173,7 @@ namespace TaskGX.GUI
             this.BotaoVerSenha.Location = new System.Drawing.Point(180, 166);
             this.BotaoVerSenha.Name = "BotaoVerSenha";
             this.BotaoVerSenha.Size = new System.Drawing.Size(14, 15);
-            this.BotaoVerSenha.TabIndex = 8;
+            this.BotaoVerSenha.TabIndex = 6;
             this.BotaoVerSenha.UseVisualStyleBackColor = true;
             this.BotaoVerSenha.Click += new System.EventHandler(this.BotaoVerSenha_Click);
             // 
@@ -245,7 +245,7 @@ namespace TaskGX.GUI
             this.BotaoAlterarSenha.Location = new System.Drawing.Point(400, 166);
             this.BotaoAlterarSenha.Name = "BotaoAlterarSenha";
             this.BotaoAlterarSenha.Size = new System.Drawing.Size(140, 28);
-            this.BotaoAlterarSenha.TabIndex = 7;
+            this.BotaoAlterarSenha.TabIndex = 8;
             this.BotaoAlterarSenha.Text = "Alterar senha";
             this.BotaoAlterarSenha.UseVisualStyleBackColor = false;
             this.BotaoAlterarSenha.Click += new System.EventHandler(this.BotaoAlterarSenha_Click);
@@ -295,7 +295,7 @@ namespace TaskGX.GUI
             this.lblStatus.Location = new System.Drawing.Point(0, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(100, 23);
-            this.lblStatus.TabIndex = 6;
+            this.lblStatus.TabIndex = 0;
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormCentralConta
