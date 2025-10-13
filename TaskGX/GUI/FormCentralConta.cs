@@ -28,7 +28,7 @@ namespace TaskGX.GUI
         {
             this.Text = $"Gestão da Conta - {NomeUtilizador}";
             CarregarDadosUtilizador();
-            this.CancelButton = btnFechar;
+            this.CancelButton = BotaoFechar;
         }
         private void CarregarDadosUtilizador()
         {
@@ -47,8 +47,8 @@ namespace TaskGX.GUI
                         {
                             if (reader.Read())
                             {
-                                lblIdValor.Text = reader["ID"].ToString();
-                                lblNomeValor.Text = reader["Nome"].ToString();
+                                LabelValorID.Text = reader["ID"].ToString();
+                                LabelValorNome.Text = reader["Nome"].ToString();
                             }
                             else
                             {
@@ -67,17 +67,17 @@ namespace TaskGX.GUI
 
         private void BotaoVerSenha_Click(object sender, EventArgs e)
         {
-            if (this.SenhaAtual.PasswordChar != '*')
+            if (this.TextSenhaAtual.PasswordChar != '*')
             {
-                this.SenhaAtual.PasswordChar = '*';
-                this.NovaSenha.PasswordChar = '*';
-                this.ConfirmarNova.PasswordChar = '*';
+                this.TextSenhaAtual.PasswordChar = '*';
+                this.TextNovaSenha.PasswordChar = '*';
+                this.TextConfirmarNova.PasswordChar = '*';
             }
             else
             {
-                this.SenhaAtual.PasswordChar = '\0';
-                this.NovaSenha.PasswordChar = '\0';
-                this.ConfirmarNova.PasswordChar = '\0';
+                this.TextSenhaAtual.PasswordChar = '\0';
+                this.TextNovaSenha.PasswordChar = '\0';
+                this.TextConfirmarNova.PasswordChar = '\0';
             }
         }
 
@@ -120,9 +120,9 @@ namespace TaskGX.GUI
 
         private void BotaoAlterarSenha_Click(object sender, EventArgs e)
         {
-            string senhaAtual = SenhaAtual.Text.Trim();
-            string novaSenha = NovaSenha.Text.Trim();
-            string confirmarNova = ConfirmarNova.Text.Trim();
+            string senhaAtual = TextSenhaAtual.Text.Trim();
+            string novaSenha = TextNovaSenha.Text.Trim();
+            string confirmarNova = TextConfirmarNova.Text.Trim();
 
             // Validações básicas
             if (string.IsNullOrEmpty(senhaAtual) || string.IsNullOrEmpty(novaSenha) || string.IsNullOrEmpty(confirmarNova))
@@ -172,9 +172,9 @@ namespace TaskGX.GUI
                 MessageBox.Show("Senha alterada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Limpa os campos de senha
-                SenhaAtual.Clear();
-                NovaSenha.Clear();
-                ConfirmarNova.Clear();
+                TextSenhaAtual.Clear();
+                TextNovaSenha.Clear();
+                TextConfirmarNova.Clear();
             }
             catch (Exception ex)
             {
