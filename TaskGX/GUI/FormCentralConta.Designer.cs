@@ -286,7 +286,7 @@ namespace TaskGX.GUI
             this.BotaoFechar.TabIndex = 5;
             this.BotaoFechar.Text = "Fechar";
             this.BotaoFechar.UseVisualStyleBackColor = false;
-            this.BotaoFechar.Click += new System.EventHandler(this.btnFechar_Click_1);
+            this.BotaoFechar.Click += new System.EventHandler(this.BotaoFechar_Click);
             // 
             // lblStatus
             // 
