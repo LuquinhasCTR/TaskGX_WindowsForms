@@ -18,11 +18,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.LabelTitulo = new System.Windows.Forms.Label();
-            this.LabelUsuario = new System.Windows.Forms.Label();
-            this.textUsuario = new System.Windows.Forms.TextBox();
+            this.LabelUtilizador = new System.Windows.Forms.Label();
+            this.TextUtilizador = new System.Windows.Forms.TextBox();
             this.LabelSenha = new System.Windows.Forms.Label();
-            this.textSenha = new System.Windows.Forms.TextBox();
-            this.botaoEntrar = new System.Windows.Forms.Button();
+            this.TextSenha = new System.Windows.Forms.TextBox();
+            this.BotaoEntrar = new System.Windows.Forms.Button();
             this.BotaoVerSenha = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BotaoCriar = new System.Windows.Forms.Button();
@@ -39,25 +39,25 @@
             this.LabelTitulo.TabIndex = 0;
             this.LabelTitulo.Text = "TaskGX";
             // 
-            // LabelUsuario
+            // LabelUtilizador
             // 
-            this.LabelUsuario.AutoSize = true;
-            this.LabelUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.LabelUsuario.Location = new System.Drawing.Point(35, 89);
-            this.LabelUsuario.Name = "LabelUsuario";
-            this.LabelUsuario.Size = new System.Drawing.Size(59, 19);
-            this.LabelUsuario.TabIndex = 1;
-            this.LabelUsuario.Text = "Usuário:";
+            this.LabelUtilizador.AutoSize = true;
+            this.LabelUtilizador.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LabelUtilizador.Location = new System.Drawing.Point(35, 89);
+            this.LabelUtilizador.Name = "LabelUtilizador";
+            this.LabelUtilizador.Size = new System.Drawing.Size(59, 19);
+            this.LabelUtilizador.TabIndex = 1;
+            this.LabelUtilizador.Text = "Usuário:";
             // 
-            // textUsuario
+            // TextUtilizador
             // 
-            this.textUsuario.BackColor = System.Drawing.Color.LightGray;
-            this.textUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textUsuario.Location = new System.Drawing.Point(110, 87);
-            this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(180, 25);
-            this.textUsuario.TabIndex = 2;
+            this.TextUtilizador.BackColor = System.Drawing.Color.LightGray;
+            this.TextUtilizador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextUtilizador.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TextUtilizador.Location = new System.Drawing.Point(110, 87);
+            this.TextUtilizador.Name = "TextUtilizador";
+            this.TextUtilizador.Size = new System.Drawing.Size(180, 25);
+            this.TextUtilizador.TabIndex = 2;
             // 
             // LabelSenha
             // 
@@ -69,32 +69,32 @@
             this.LabelSenha.TabIndex = 3;
             this.LabelSenha.Text = "Senha:";
             // 
-            // textSenha
+            // TextSenha
             // 
-            this.textSenha.BackColor = System.Drawing.Color.LightGray;
-            this.textSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textSenha.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textSenha.Location = new System.Drawing.Point(110, 137);
-            this.textSenha.Name = "textSenha";
-            this.textSenha.PasswordChar = '*';
-            this.textSenha.Size = new System.Drawing.Size(180, 25);
-            this.textSenha.TabIndex = 4;
+            this.TextSenha.BackColor = System.Drawing.Color.LightGray;
+            this.TextSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextSenha.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TextSenha.Location = new System.Drawing.Point(110, 137);
+            this.TextSenha.Name = "TextSenha";
+            this.TextSenha.PasswordChar = '*';
+            this.TextSenha.Size = new System.Drawing.Size(180, 25);
+            this.TextSenha.TabIndex = 4;
             // 
-            // botaoEntrar
+            // BotaoEntrar
             // 
-            this.botaoEntrar.BackColor = System.Drawing.Color.DimGray;
-            this.botaoEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoEntrar.FlatAppearance.BorderSize = 0;
-            this.botaoEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoEntrar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.botaoEntrar.ForeColor = System.Drawing.Color.Black;
-            this.botaoEntrar.Location = new System.Drawing.Point(110, 190);
-            this.botaoEntrar.Name = "botaoEntrar";
-            this.botaoEntrar.Size = new System.Drawing.Size(180, 35);
-            this.botaoEntrar.TabIndex = 5;
-            this.botaoEntrar.Text = "Entrar";
-            this.botaoEntrar.UseVisualStyleBackColor = false;
-            this.botaoEntrar.Click += new System.EventHandler(this.botaoEntrar_Click);
+            this.BotaoEntrar.BackColor = System.Drawing.Color.DimGray;
+            this.BotaoEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotaoEntrar.FlatAppearance.BorderSize = 0;
+            this.BotaoEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotaoEntrar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.BotaoEntrar.ForeColor = System.Drawing.Color.Black;
+            this.BotaoEntrar.Location = new System.Drawing.Point(110, 190);
+            this.BotaoEntrar.Name = "BotaoEntrar";
+            this.BotaoEntrar.Size = new System.Drawing.Size(180, 35);
+            this.BotaoEntrar.TabIndex = 5;
+            this.BotaoEntrar.Text = "Entrar";
+            this.BotaoEntrar.UseVisualStyleBackColor = false;
+            this.BotaoEntrar.Click += new System.EventHandler(this.BotaoEntrar_Click);
             // 
             // BotaoVerSenha
             // 
@@ -139,11 +139,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BotaoVerSenha);
             this.Controls.Add(this.LabelTitulo);
-            this.Controls.Add(this.LabelUsuario);
-            this.Controls.Add(this.textUsuario);
+            this.Controls.Add(this.LabelUtilizador);
+            this.Controls.Add(this.TextUtilizador);
             this.Controls.Add(this.LabelSenha);
-            this.Controls.Add(this.textSenha);
-            this.Controls.Add(this.botaoEntrar);
+            this.Controls.Add(this.TextSenha);
+            this.Controls.Add(this.BotaoEntrar);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(384, 339);
@@ -159,11 +159,11 @@
         }
 
         private System.Windows.Forms.Label LabelTitulo;
-        private System.Windows.Forms.Label LabelUsuario;
-        private System.Windows.Forms.TextBox textUsuario;
+        private System.Windows.Forms.Label LabelUtilizador;
+        private System.Windows.Forms.TextBox TextUtilizador;
         private System.Windows.Forms.Label LabelSenha;
-        private System.Windows.Forms.TextBox textSenha;
-        private System.Windows.Forms.Button botaoEntrar;
+        private System.Windows.Forms.TextBox TextSenha;
+        private System.Windows.Forms.Button BotaoEntrar;
         #endregion
 
         private System.Windows.Forms.Button BotaoVerSenha;
