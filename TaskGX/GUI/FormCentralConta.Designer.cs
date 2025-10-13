@@ -52,6 +52,7 @@ namespace TaskGX.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCentralConta));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.Perfil = new System.Windows.Forms.GroupBox();
             this.lblId = new System.Windows.Forms.Label();
@@ -312,6 +313,7 @@ namespace TaskGX.GUI
             this.Controls.Add(this.Sessao);
             this.Controls.Add(this.lblStatus);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(560, 520);
             this.Name = "FormCentralConta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
