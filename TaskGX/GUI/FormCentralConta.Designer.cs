@@ -232,6 +232,7 @@ namespace TaskGX.GUI
             this.ConfirmarNova.BackColor = System.Drawing.Color.Gainsboro;
             this.ConfirmarNova.Location = new System.Drawing.Point(180, 116);
             this.ConfirmarNova.Name = "ConfirmarNova";
+            this.ConfirmarNova.PasswordChar = '*';
             this.ConfirmarNova.Size = new System.Drawing.Size(360, 23);
             this.ConfirmarNova.TabIndex = 5;
             // 
