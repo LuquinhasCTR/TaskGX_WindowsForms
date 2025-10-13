@@ -54,7 +54,7 @@
             this.LabelSenha.Location = new System.Drawing.Point(30, 80);
             this.LabelSenha.Name = "LabelSenha";
             this.LabelSenha.Size = new System.Drawing.Size(38, 13);
-            this.LabelSenha.TabIndex = 1;
+            this.LabelSenha.TabIndex = 2;
             this.LabelSenha.Text = "Senha";
             // 
             // LabelConfirmarSenha
@@ -63,7 +63,7 @@
             this.LabelConfirmarSenha.Location = new System.Drawing.Point(30, 130);
             this.LabelConfirmarSenha.Name = "LabelConfirmarSenha";
             this.LabelConfirmarSenha.Size = new System.Drawing.Size(85, 13);
-            this.LabelConfirmarSenha.TabIndex = 2;
+            this.LabelConfirmarSenha.TabIndex = 4;
             this.LabelConfirmarSenha.Text = "Confirmar Senha";
             // 
             // TextUtilizador
@@ -72,7 +72,7 @@
             this.TextUtilizador.Location = new System.Drawing.Point(150, 27);
             this.TextUtilizador.Name = "TextUtilizador";
             this.TextUtilizador.Size = new System.Drawing.Size(200, 20);
-            this.TextUtilizador.TabIndex = 3;
+            this.TextUtilizador.TabIndex = 1;
             // 
             // TextSenha
             // 
@@ -81,7 +81,7 @@
             this.TextSenha.Name = "TextSenha";
             this.TextSenha.PasswordChar = '*';
             this.TextSenha.Size = new System.Drawing.Size(200, 20);
-            this.TextSenha.TabIndex = 4;
+            this.TextSenha.TabIndex = 3;
             // 
             // TextConfirmarSenha
             // 
