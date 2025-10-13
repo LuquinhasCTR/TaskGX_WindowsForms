@@ -5,7 +5,6 @@ namespace TaskGX.GUI
     partial class FormCentralConta
     {
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblUsuario;
 
         private System.Windows.Forms.GroupBox Perfil;
         private System.Windows.Forms.Label lblId;
@@ -54,7 +53,6 @@ namespace TaskGX.GUI
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.Perfil = new System.Windows.Forms.GroupBox();
             this.lblId = new System.Windows.Forms.Label();
             this.lblIdValor = new System.Windows.Forms.Label();
@@ -89,15 +87,6 @@ namespace TaskGX.GUI
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Central da Conta";
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(18, 44);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(75, 15);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Utilizador: —";
-            // 
             // Perfil
             // 
             this.Perfil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -106,7 +95,7 @@ namespace TaskGX.GUI
             this.Perfil.Controls.Add(this.lblIdValor);
             this.Perfil.Controls.Add(this.lblNome);
             this.Perfil.Controls.Add(this.lblNomeValor);
-            this.Perfil.Location = new System.Drawing.Point(16, 72);
+            this.Perfil.Location = new System.Drawing.Point(16, 62);
             this.Perfil.Name = "Perfil";
             this.Perfil.Size = new System.Drawing.Size(608, 88);
             this.Perfil.TabIndex = 2;
@@ -319,7 +308,6 @@ namespace TaskGX.GUI
             this.Controls.Add(this.Seguranca);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.Perfil);
             this.Controls.Add(this.Sessao);
             this.Controls.Add(this.lblStatus);
