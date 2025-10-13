@@ -399,3 +399,38 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build
+[Bb]in/
+[Oo]bj/
+*.log
+*.tlog
+*.vspscc
+
+# NuGet
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+.history/
+
+# Windows temp
+Thumbs.db
+desktop.ini
+
+# Database / backups
+*.mdf
+*.ldf
+*.dbmdl
