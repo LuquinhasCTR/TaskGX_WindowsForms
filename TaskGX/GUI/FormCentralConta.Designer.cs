@@ -20,7 +20,6 @@ namespace TaskGX.GUI
         private System.Windows.Forms.TextBox NovaSenha;
         private System.Windows.Forms.Label lblConfirmar;
         private System.Windows.Forms.TextBox ConfirmarNova;
-        private System.Windows.Forms.CheckBox MostrarSenha;
         private System.Windows.Forms.Button BotaoAlterarSenha;
 
         private System.Windows.Forms.GroupBox Sessao;
@@ -62,13 +61,14 @@ namespace TaskGX.GUI
             this.lblNome = new System.Windows.Forms.Label();
             this.lblNomeValor = new System.Windows.Forms.Label();
             this.Seguranca = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BotaoVerSenha = new System.Windows.Forms.Button();
             this.lblSenhaAtual = new System.Windows.Forms.Label();
             this.SenhaAtual = new System.Windows.Forms.TextBox();
             this.lblNovaSenha = new System.Windows.Forms.Label();
             this.NovaSenha = new System.Windows.Forms.TextBox();
             this.lblConfirmar = new System.Windows.Forms.Label();
             this.ConfirmarNova = new System.Windows.Forms.TextBox();
-            this.MostrarSenha = new System.Windows.Forms.CheckBox();
             this.BotaoAlterarSenha = new System.Windows.Forms.Button();
             this.Sessao = new System.Windows.Forms.GroupBox();
             this.BotaoTerminarSessao = new System.Windows.Forms.Button();
@@ -154,13 +154,14 @@ namespace TaskGX.GUI
             // 
             this.Seguranca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Seguranca.Controls.Add(this.label1);
+            this.Seguranca.Controls.Add(this.BotaoVerSenha);
             this.Seguranca.Controls.Add(this.lblSenhaAtual);
             this.Seguranca.Controls.Add(this.SenhaAtual);
             this.Seguranca.Controls.Add(this.lblNovaSenha);
             this.Seguranca.Controls.Add(this.NovaSenha);
             this.Seguranca.Controls.Add(this.lblConfirmar);
             this.Seguranca.Controls.Add(this.ConfirmarNova);
-            this.Seguranca.Controls.Add(this.MostrarSenha);
             this.Seguranca.Controls.Add(this.BotaoAlterarSenha);
             this.Seguranca.Location = new System.Drawing.Point(16, 172);
             this.Seguranca.Name = "Seguranca";
@@ -168,6 +169,24 @@ namespace TaskGX.GUI
             this.Seguranca.TabIndex = 3;
             this.Seguranca.TabStop = false;
             this.Seguranca.Text = "Segurança";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(200, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Ver senhas";
+            // 
+            // BotaoVerSenha
+            // 
+            this.BotaoVerSenha.Location = new System.Drawing.Point(180, 166);
+            this.BotaoVerSenha.Name = "BotaoVerSenha";
+            this.BotaoVerSenha.Size = new System.Drawing.Size(14, 15);
+            this.BotaoVerSenha.TabIndex = 8;
+            this.BotaoVerSenha.UseVisualStyleBackColor = true;
+            this.BotaoVerSenha.Click += new System.EventHandler(this.BotaoVerSenha_Click);
             // 
             // lblSenhaAtual
             // 
@@ -185,9 +204,9 @@ namespace TaskGX.GUI
             this.SenhaAtual.BackColor = System.Drawing.Color.Gainsboro;
             this.SenhaAtual.Location = new System.Drawing.Point(180, 28);
             this.SenhaAtual.Name = "SenhaAtual";
+            this.SenhaAtual.PasswordChar = '*';
             this.SenhaAtual.Size = new System.Drawing.Size(360, 23);
             this.SenhaAtual.TabIndex = 1;
-            this.SenhaAtual.UseSystemPasswordChar = true;
             // 
             // lblNovaSenha
             // 
@@ -205,9 +224,9 @@ namespace TaskGX.GUI
             this.NovaSenha.BackColor = System.Drawing.Color.Gainsboro;
             this.NovaSenha.Location = new System.Drawing.Point(180, 72);
             this.NovaSenha.Name = "NovaSenha";
+            this.NovaSenha.PasswordChar = '*';
             this.NovaSenha.Size = new System.Drawing.Size(360, 23);
             this.NovaSenha.TabIndex = 3;
-            this.NovaSenha.UseSystemPasswordChar = true;
             // 
             // lblConfirmar
             // 
@@ -227,17 +246,6 @@ namespace TaskGX.GUI
             this.ConfirmarNova.Name = "ConfirmarNova";
             this.ConfirmarNova.Size = new System.Drawing.Size(360, 23);
             this.ConfirmarNova.TabIndex = 5;
-            this.ConfirmarNova.UseSystemPasswordChar = true;
-            // 
-            // MostrarSenha
-            // 
-            this.MostrarSenha.AutoSize = true;
-            this.MostrarSenha.Location = new System.Drawing.Point(180, 148);
-            this.MostrarSenha.Name = "MostrarSenha";
-            this.MostrarSenha.Size = new System.Drawing.Size(106, 19);
-            this.MostrarSenha.TabIndex = 6;
-            this.MostrarSenha.Text = "Mostrar senhas";
-            this.MostrarSenha.CheckedChanged += new System.EventHandler(this.chkMostrar_CheckedChanged);
             // 
             // BotaoAlterarSenha
             // 
@@ -308,11 +316,11 @@ namespace TaskGX.GUI
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CancelButton = this.btnFechar;
             this.ClientSize = new System.Drawing.Size(640, 560);
+            this.Controls.Add(this.Seguranca);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.Perfil);
-            this.Controls.Add(this.Seguranca);
             this.Controls.Add(this.Sessao);
             this.Controls.Add(this.lblStatus);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -320,6 +328,7 @@ namespace TaskGX.GUI
             this.Name = "FormCentralConta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Central da Conta";
+            this.Load += new System.EventHandler(this.FormCentralConta_Load);
             this.Perfil.ResumeLayout(false);
             this.Perfil.PerformLayout();
             this.Seguranca.ResumeLayout(false);
@@ -331,5 +340,8 @@ namespace TaskGX.GUI
         }
 
         #endregion
+
+        private Button BotaoVerSenha;
+        private Label label1;
     }
 }
