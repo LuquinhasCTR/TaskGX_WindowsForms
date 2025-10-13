@@ -8,9 +8,15 @@ namespace TaskGX.GUI
 {
     public partial class FormTarefas : Form
     {
+        // Armazena o ID e nome do utilizador autenticado
         private int UtilizadorID;
         private string NomeUtilizador;
 
+        /// <summary>
+        /// Forma de gestão de tarefas
+        /// </summary>
+        /// <param name="utilizadorID"></param>
+        /// <param name="nomeUtilizador"></param>
         public FormTarefas(int utilizadorID, string nomeUtilizador)
         {
             InitializeComponent();
@@ -20,6 +26,11 @@ namespace TaskGX.GUI
             this.CancelButton = BotaoSair;
         }
 
+        /// <summary>
+        /// Carrega os dados do utilizador e inicializa a interface
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormTarefas_Load(object sender, EventArgs e)
         {
             this.Text = $"Gestão de Tarefas - {NomeUtilizador}";
@@ -28,18 +39,23 @@ namespace TaskGX.GUI
             this.CancelButton = BotaoSair;
         }
 
+        /// <summary>
+        /// Evento de clique para adicionar uma nova tarefa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BotaoAdicionar_Click(object sender, EventArgs e)
         {
             string nome = TextTituloTarefa.Text.Trim();
             string descricao = TextDescricaoTarefa.Text.Trim();
             DateTime data = DateData.Value.Date;
 
+            // Validação básica
             if (string.IsNullOrEmpty(nome))
             {
                 MessageBox.Show("O nome da tarefa é obrigatório.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             try
             {
                 using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
@@ -68,25 +84,32 @@ namespace TaskGX.GUI
             }
         }
 
+        /// <summary>
+        /// Botão para editar uma tarefa selecionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BotaoEditar_Click(object sender, EventArgs e)
         {
+            // Verifica se uma linha está selecionada
             if (GridViewTarefa.CurrentRow == null)
             {
                 MessageBox.Show("Selecione uma tarefa para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            // Obtém os dados da tarefa selecionada
             int id = Convert.ToInt32(GridViewTarefa.CurrentRow.Cells["ID"].Value);
             string nome = TextTituloTarefa.Text.Trim();
             string descricao = TextDescricaoTarefa.Text.Trim();
             DateTime data = DateData.Value.Date;
 
+            // Validação básica
             if (string.IsNullOrEmpty(nome))
             {
                 MessageBox.Show("O nome da tarefa é obrigatório.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             try
             {
                 using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
@@ -113,23 +136,26 @@ namespace TaskGX.GUI
             }
         }
 
+        /// <summary>
+        /// Botão para excluir a tarefa selecionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BotaoExcluir_Click(object sender, EventArgs e)
         {
+            // Verifica se uma linha está selecionada
             if (GridViewTarefa.CurrentRow == null)
             {
                 MessageBox.Show("Selecione uma tarefa para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            // Obtém o ID da tarefa selecionada
             int id = Convert.ToInt32(GridViewTarefa.CurrentRow.Cells["ID"].Value);
 
-            DialogResult resultado = MessageBox.Show(
-                "Deseja realmente excluir esta tarefa?",
-                "Confirmação",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
+            DialogResult resultado = MessageBox.Show("Deseja realmente excluir esta tarefa?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            // Se o utilizador confirmar, prossegue com a exclusão
             if (resultado == DialogResult.Yes)
             {
                 try
@@ -159,10 +185,15 @@ namespace TaskGX.GUI
             }
         }
 
+        /// <summary>
+        /// Função para carregar as tarefas do utilizador na grelha
+        /// </summary>
         private void CarregarDados()
         {
+            // Limpa a grelha antes de carregar os dados
             try
             {
+                // Configura a grelha
                 using (MySqlConnection conexao = new MySqlConnection(LigacaoDB.GetConnectionString()))
                 {
                     conexao.Open();
@@ -183,8 +214,14 @@ namespace TaskGX.GUI
             }
         }
 
+        /// <summary>
+        /// Gerir o clique na grelha para preencher os campos de edição
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GridViewTarefa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Verifica se uma linha está selecionada
             if (GridViewTarefa.CurrentRow != null)
             {
                 TextTituloTarefa.Text = GridViewTarefa.CurrentRow.Cells["Nome"].Value.ToString();
@@ -193,12 +230,22 @@ namespace TaskGX.GUI
             }
         }
 
+        /// <summary>
+        /// Botão para sair da aplicação
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BotaoSair_Click(object sender, EventArgs e)
         {
             EncerrarSessao();
         }
+
+        /// <summary>
+        /// Função para encerrar a sessão e voltar ao ecrã de login
+        /// </summary>
         private void EncerrarSessao()
         {
+            // Fecha o formulário de gestão de conta se estiver aberto
             foreach (Form form in Application.OpenForms)
             {
                 if (form is FormCentralConta)
@@ -207,12 +254,17 @@ namespace TaskGX.GUI
                     break;
                 }
             }
+
+            // Volta ao formulário de login
             var formLogin = Application.OpenForms["Form1"] as Form1;
+
+            // Se o formulário de login já estiver aberto, apenas trazê-lo para frente
             if (formLogin != null)
             {
                 formLogin.Show();
                 formLogin.BringToFront();
                 formLogin.WindowState = FormWindowState.Normal;
+
                 try
                 {
                     formLogin.Controls["textUsuario"].Text = "";
@@ -220,6 +272,7 @@ namespace TaskGX.GUI
                 }
                 catch { }
             }
+            // Caso contrário, criar uma nova instância do formulário de login
             else
             {
                 new Form1().Show();
@@ -227,35 +280,17 @@ namespace TaskGX.GUI
 
             this.Hide();
         }
+
         private void FormTarefas_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
         }
 
-        private void escluirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-        }
-
-        private void tarefasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void colarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Serve para abrir o formulário de gestão de conta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gerirContaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCentralConta formCentralConta = new FormCentralConta(UtilizadorID,NomeUtilizador);

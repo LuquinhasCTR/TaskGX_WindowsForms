@@ -235,7 +235,6 @@
             this.Menu.Size = new System.Drawing.Size(59, 24);
             this.Menu.TabIndex = 4;
             this.Menu.Text = "menuStrip1";
-            this.Menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // contaToolStripMenuItem
             // 
@@ -244,7 +243,6 @@
             this.contaToolStripMenuItem.Name = "contaToolStripMenuItem";
             this.contaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.contaToolStripMenuItem.Text = "Conta";
-            this.contaToolStripMenuItem.Click += new System.EventHandler(this.contaToolStripMenuItem_Click);
             // 
             // gerirContaToolStripMenuItem
             // 

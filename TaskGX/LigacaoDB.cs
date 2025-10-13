@@ -12,6 +12,7 @@ namespace TaskGX
         /// Endereço do servidor.
         /// </summary>
         public static string Servidor { get; private set; } = "127.0.0.1";
+
         /// <summary>
         /// Nome do utilizador.
         /// </summary>
@@ -21,10 +22,12 @@ namespace TaskGX
         /// Password do utilizador.
         /// </summary>
         public static string Password { get; private set; } = string.Empty;
+
         /// <summary>
         /// Base de dados a utilizar.
         /// </summary>
         public static string DB { get; private set; } = "TaskGX_DB";
+
         /// <summary>
         /// Obter a string de ligação (connection string) ao servidor de base de dados.
         /// </summary>
