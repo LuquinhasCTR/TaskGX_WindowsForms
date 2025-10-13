@@ -95,7 +95,7 @@
             this.DateData.Location = new System.Drawing.Point(20, 93);
             this.DateData.Name = "DateData";
             this.DateData.Size = new System.Drawing.Size(740, 20);
-            this.DateData.TabIndex = 4;
+            this.DateData.TabIndex = 3;
             // 
             // TextTituloTarefa
             // 
@@ -233,7 +233,7 @@
             this.Menu.Name = "Menu";
             this.Menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.Menu.Size = new System.Drawing.Size(59, 24);
-            this.Menu.TabIndex = 4;
+            this.Menu.TabIndex = 0;
             this.Menu.Text = "menuStrip1";
             // 
             // contaToolStripMenuItem
