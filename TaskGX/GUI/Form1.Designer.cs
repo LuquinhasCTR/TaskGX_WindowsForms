@@ -91,7 +91,7 @@
             this.BotaoEntrar.Location = new System.Drawing.Point(110, 190);
             this.BotaoEntrar.Name = "BotaoEntrar";
             this.BotaoEntrar.Size = new System.Drawing.Size(180, 35);
-            this.BotaoEntrar.TabIndex = 5;
+            this.BotaoEntrar.TabIndex = 7;
             this.BotaoEntrar.Text = "Entrar";
             this.BotaoEntrar.UseVisualStyleBackColor = false;
             this.BotaoEntrar.Click += new System.EventHandler(this.BotaoEntrar_Click);
@@ -102,7 +102,7 @@
             this.BotaoVerSenha.Location = new System.Drawing.Point(293, 139);
             this.BotaoVerSenha.Name = "BotaoVerSenha";
             this.BotaoVerSenha.Size = new System.Drawing.Size(18, 19);
-            this.BotaoVerSenha.TabIndex = 6;
+            this.BotaoVerSenha.TabIndex = 5;
             this.BotaoVerSenha.UseVisualStyleBackColor = false;
             this.BotaoVerSenha.Click += new System.EventHandler(this.BotaoVerSenha_Click);
             // 
@@ -112,7 +112,7 @@
             this.label1.Location = new System.Drawing.Point(310, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 15);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Ver senha";
             // 
             // BotaoCriar
