@@ -26,9 +26,24 @@ Sistema de **gestão de tarefas multiusuário**, desenvolvido em **C# (Windows F
 
 ---
 
+## 🖼️ Capturas de Tela
+
+### Tela de Login
+![Login](Imagens/Form1.png)
+
+### Criar Nova Conta
+![Criar](ImagensAplicacao/FormCriarConta.png)
+
+### Gestão de Tarefas
+![Tarefas](ImagensAplicacao/FormTarefas.png)
+
+### Central da Conta
+![Perfil](ImagensAplicacao/FormCentralConta.png)
+
+---
+
 ## 🗂️ Estrutura do Projeto
 
-```
 TaskGX/
 ├── GUI/
 │   ├── FormTarefas.cs
@@ -83,7 +98,7 @@ CREATE TABLE IF NOT EXISTS Tarefa (
 );
 
 INSERT INTO Utilizadores (Nome, Senha) VALUES
-('Lucas', SHA2('lucas29p', 256)),
+('Lucas', SHA2('lucas123', 256)),
 ('Monilo', SHA2('nilo123', 256));
 
 INSERT INTO Tarefa (Nome, Descricao, Data, UtilizadorID) VALUES
@@ -122,7 +137,7 @@ public static string GetConnectionString()
 
 | Usuário | Senha |
 |---------|-------|
-| Lucas   | lucas29p |
+| Lucas   | lucas123 |
 | Monilo  | nilo123 |
 
 > Cada usuário verá apenas suas próprias tarefas.
