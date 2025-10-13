@@ -53,7 +53,7 @@ namespace TaskGX
 
                                 var formTarefas = new GUI.FormTarefas(utilizadorID, nome);
                                 formTarefas.Show();
-                                this.Hide();
+                                this.Hide(); 
                             }
                             else
                             {

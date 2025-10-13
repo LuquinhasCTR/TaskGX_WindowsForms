@@ -282,7 +282,7 @@ namespace TaskGX.GUI
             this.BotaoTerminarSessao.TabIndex = 0;
             this.BotaoTerminarSessao.Text = "Terminar sessão";
             this.BotaoTerminarSessao.UseVisualStyleBackColor = false;
-            this.BotaoTerminarSessao.Click += new System.EventHandler(this.btnTerminarSessao_Click);
+            this.BotaoTerminarSessao.Click += new System.EventHandler(this.BotaoTerminarSessao_Click);
             // 
             // btnFechar
             // 

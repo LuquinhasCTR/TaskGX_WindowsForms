@@ -26,17 +26,13 @@ namespace TaskGX.GUI
 
         }
 
-        private void btnTerminarSessao_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
 
         }
 
-        
+
 
         private void Perfil_Enter(object sender, EventArgs e)
         {
@@ -48,19 +44,12 @@ namespace TaskGX.GUI
 
         }
 
-        private void MostrarSenha_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void MostrarSenha_Click(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void BotaoVerSenha_Click(object sender, EventArgs e)
         {
-            if (this.SenhaAtual.PasswordChar != '*'/* && NovaSenha.PasswordChar != '*' && ConfirmarNova.PasswordChar != '*'*/)
+            if (this.SenhaAtual.PasswordChar != '*')
             {
                 this.SenhaAtual.PasswordChar = '*';
                 this.NovaSenha.PasswordChar = '*';
@@ -72,6 +61,47 @@ namespace TaskGX.GUI
                 this.NovaSenha.PasswordChar = '\0';
                 this.ConfirmarNova.PasswordChar = '\0';
             }
+        }
+
+        private void BotaoTerminarSessao_Click(object sender, EventArgs e)
+        {
+            var confirmar = MessageBox.Show(
+       "Tem a certeza de que deseja terminar a sessão?",
+       "Terminar Sessão",
+       MessageBoxButtons.YesNo,
+       MessageBoxIcon.Question);
+
+            if (confirmar != DialogResult.Yes)
+                return;
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is FormTarefas)
+                {
+                    form.Hide();
+                    break;
+                }
+            }
+
+            var formLogin = Application.OpenForms["Form1"] as Form1;
+            if (formLogin != null)
+            {
+                formLogin.Show();
+                formLogin.BringToFront();
+                formLogin.WindowState = FormWindowState.Normal;
+                try
+                {
+                    formLogin.Controls["textUsuario"].Text = "";
+                    formLogin.Controls["textSenha"].Text = "";
+                }
+                catch { }
+            }
+            else
+            {
+                new Form1().Show();
+            }
+
+            this.Hide();
         }
     }
 }

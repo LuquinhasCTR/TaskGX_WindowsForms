@@ -193,9 +193,38 @@ namespace TaskGX.GUI
 
         private void BotaoSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            EncerrarSessao();
         }
+        private void EncerrarSessao()
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is FormCentralConta)
+                {
+                    form.Close();
+                    break;
+                }
+            }
+            var formLogin = Application.OpenForms["Form1"] as Form1;
+            if (formLogin != null)
+            {
+                formLogin.Show();
+                formLogin.BringToFront();
+                formLogin.WindowState = FormWindowState.Normal;
+                try
+                {
+                    formLogin.Controls["textUsuario"].Text = "";
+                    formLogin.Controls["textSenha"].Text = "";
+                }
+                catch { }
+            }
+            else
+            {
+                new Form1().Show();
+            }
 
+            this.Hide();
+        }
         private void FormTarefas_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
