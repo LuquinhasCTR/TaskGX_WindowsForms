@@ -29,68 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCriarConta));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Usuario = new System.Windows.Forms.TextBox();
-            this.Senha = new System.Windows.Forms.TextBox();
-            this.ConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.LabelUtilizador = new System.Windows.Forms.Label();
+            this.LabelSenha = new System.Windows.Forms.Label();
+            this.LabelConfirmarSenha = new System.Windows.Forms.Label();
+            this.TextUtilizador = new System.Windows.Forms.TextBox();
+            this.TextSenha = new System.Windows.Forms.TextBox();
+            this.TextConfirmarSenha = new System.Windows.Forms.TextBox();
             this.BotaoRegistrar = new System.Windows.Forms.Button();
             this.BotaoCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // LabelUtilizador
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuário";
+            this.LabelUtilizador.AutoSize = true;
+            this.LabelUtilizador.Location = new System.Drawing.Point(30, 30);
+            this.LabelUtilizador.Name = "LabelUtilizador";
+            this.LabelUtilizador.Size = new System.Drawing.Size(50, 13);
+            this.LabelUtilizador.TabIndex = 0;
+            this.LabelUtilizador.Text = "Utilizador";
             // 
-            // label2
+            // LabelSenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Senha";
+            this.LabelSenha.AutoSize = true;
+            this.LabelSenha.Location = new System.Drawing.Point(30, 80);
+            this.LabelSenha.Name = "LabelSenha";
+            this.LabelSenha.Size = new System.Drawing.Size(38, 13);
+            this.LabelSenha.TabIndex = 1;
+            this.LabelSenha.Text = "Senha";
             // 
-            // label3
+            // LabelConfirmarSenha
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Confirmar Senha";
+            this.LabelConfirmarSenha.AutoSize = true;
+            this.LabelConfirmarSenha.Location = new System.Drawing.Point(30, 130);
+            this.LabelConfirmarSenha.Name = "LabelConfirmarSenha";
+            this.LabelConfirmarSenha.Size = new System.Drawing.Size(85, 13);
+            this.LabelConfirmarSenha.TabIndex = 2;
+            this.LabelConfirmarSenha.Text = "Confirmar Senha";
             // 
-            // Usuario
+            // TextUtilizador
             // 
-            this.Usuario.BackColor = System.Drawing.Color.LightGray;
-            this.Usuario.Location = new System.Drawing.Point(150, 27);
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(200, 20);
-            this.Usuario.TabIndex = 3;
+            this.TextUtilizador.BackColor = System.Drawing.Color.LightGray;
+            this.TextUtilizador.Location = new System.Drawing.Point(150, 27);
+            this.TextUtilizador.Name = "TextUtilizador";
+            this.TextUtilizador.Size = new System.Drawing.Size(200, 20);
+            this.TextUtilizador.TabIndex = 3;
             // 
-            // Senha
+            // TextSenha
             // 
-            this.Senha.BackColor = System.Drawing.Color.LightGray;
-            this.Senha.Location = new System.Drawing.Point(150, 77);
-            this.Senha.Name = "Senha";
-            this.Senha.PasswordChar = '*';
-            this.Senha.Size = new System.Drawing.Size(200, 20);
-            this.Senha.TabIndex = 4;
+            this.TextSenha.BackColor = System.Drawing.Color.LightGray;
+            this.TextSenha.Location = new System.Drawing.Point(150, 77);
+            this.TextSenha.Name = "TextSenha";
+            this.TextSenha.PasswordChar = '*';
+            this.TextSenha.Size = new System.Drawing.Size(200, 20);
+            this.TextSenha.TabIndex = 4;
             // 
-            // ConfirmarSenha
+            // TextConfirmarSenha
             // 
-            this.ConfirmarSenha.BackColor = System.Drawing.Color.LightGray;
-            this.ConfirmarSenha.Location = new System.Drawing.Point(150, 127);
-            this.ConfirmarSenha.Name = "ConfirmarSenha";
-            this.ConfirmarSenha.PasswordChar = '*';
-            this.ConfirmarSenha.Size = new System.Drawing.Size(200, 20);
-            this.ConfirmarSenha.TabIndex = 5;
+            this.TextConfirmarSenha.BackColor = System.Drawing.Color.LightGray;
+            this.TextConfirmarSenha.Location = new System.Drawing.Point(150, 127);
+            this.TextConfirmarSenha.Name = "TextConfirmarSenha";
+            this.TextConfirmarSenha.PasswordChar = '*';
+            this.TextConfirmarSenha.Size = new System.Drawing.Size(200, 20);
+            this.TextConfirmarSenha.TabIndex = 5;
             // 
             // BotaoRegistrar
             // 
@@ -122,12 +122,12 @@
             // 
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(400, 240);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Usuario);
-            this.Controls.Add(this.Senha);
-            this.Controls.Add(this.ConfirmarSenha);
+            this.Controls.Add(this.LabelUtilizador);
+            this.Controls.Add(this.LabelSenha);
+            this.Controls.Add(this.LabelConfirmarSenha);
+            this.Controls.Add(this.TextUtilizador);
+            this.Controls.Add(this.TextSenha);
+            this.Controls.Add(this.TextConfirmarSenha);
             this.Controls.Add(this.BotaoRegistrar);
             this.Controls.Add(this.BotaoCancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -142,12 +142,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Usuario;
-        private System.Windows.Forms.TextBox Senha;
-        private System.Windows.Forms.TextBox ConfirmarSenha;
+        private System.Windows.Forms.Label LabelUtilizador;
+        private System.Windows.Forms.Label LabelSenha;
+        private System.Windows.Forms.Label LabelConfirmarSenha;
+        private System.Windows.Forms.TextBox TextUtilizador;
+        private System.Windows.Forms.TextBox TextSenha;
+        private System.Windows.Forms.TextBox TextConfirmarSenha;
         private System.Windows.Forms.Button BotaoRegistrar;
         private System.Windows.Forms.Button BotaoCancelar;
     }

@@ -41,9 +41,9 @@ namespace TaskGX
 
         private void BotaoRegistrar_Click(object sender, EventArgs e)
         {
-            string usuario = Usuario.Text.Trim();
-            string senha = Senha.Text;               
-            string confirma = ConfirmarSenha.Text;
+            string usuario = TextUtilizador.Text.Trim();
+            string senha = TextSenha.Text;               
+            string confirma = TextConfirmarSenha.Text;
 
             if (string.IsNullOrWhiteSpace(usuario) ||
                 string.IsNullOrEmpty(senha) ||
