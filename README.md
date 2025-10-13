@@ -29,10 +29,10 @@ Sistema de **gestão de tarefas multiusuário**, desenvolvido em **C# (Windows F
 ## 🖼️ Capturas de Tela
 
 ### Tela de Login
-![Login](Imagens/form1.png)
+![Login](ImagensAplicacao/form1.png)
 
 ### Criar Nova Conta
-![Criar](ImagensAplicacao/formcriarConta.png)
+![Criar](ImagensAplicacao/formcriarconta.png)
 
 ### Gestão de Tarefas
 ![Tarefas](ImagensAplicacao/FormTarefas.png)
