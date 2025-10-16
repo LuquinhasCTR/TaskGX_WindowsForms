@@ -184,6 +184,12 @@ namespace TaskGX.GUI
                 return;
             }
 
+            if (novaSenha.Length < 8)
+            {
+                MessageBox.Show("A nova senha deve ter pelo menos 8 caracteres.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Verifica se a nova senha tem pelo menos 8 caracteres
             try
             {
